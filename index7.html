@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <input type="text" placeholder="Enter username" id="username">
+        <input type="password" placeholder="Enter password" id="password">
+        <button id="login">Login</button>
+        <script>
+            $(document).ready(function(){
+                $("#login").click(function(){
+                    var uname = $("#username").val();
+                    var pword = $("#password").val();
+                    if(uname==""){
+                        alert("please enter the username");
+                    }
+                    else if(pword==""){
+                        alert("please enter the password");
+                    }
+                    else{
+                        alert("welcome");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

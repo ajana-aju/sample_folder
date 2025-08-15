@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            .box{
+                width:20px;
+                height:100px;
+                background-color: lightblue;
+            }
+            .box:hover{
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Mouse Enter and Mouse Leave Events Example</h2>
+        <div class="box">Hover over the div</div>
+        <script>
+            $(document).ready(function(){
+                $(".box").mouseenter(function(){
+                    $(this).css("color","white");
+                });
+                $(".box").mouseleave(function(){
+                    $(this).css("color","black");
+                })    
+            });
+        </script>
+    </body>
+</html>

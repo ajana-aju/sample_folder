@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .custom-alert {
+      display: none;
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      border: 2px solid #444;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
+    .custom-alert h2 {
+      margin-top: 0;
+    }
+    .custom-alert-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+<div class="custom-alert-overlay" id="alertOverlay"></div>
+
+<div class="custom-alert" id="customAlert">
+  <h2 id="alertTitle">Alert</h2>
+  <p id="alertMessage">This is a custom alert box.</p>
+  <button onclick="closeCustomAlert()">OK</button>
+</div>
+
+<script>
+  function showCustomAlert(title, message) {
+    document.getElementById("alertTitle").textContent = title;
+    document.getElementById("alertMessage").textContent = message;
+    document.getElementById("alertOverlay").style.display = "block";
+    document.getElementById("customAlert").style.display = "block";
+  }
+
+  function closeCustomAlert() {
+    document.getElementById("alertOverlay").style.display = "none";
+    document.getElementById("customAlert").style.display = "none";
+  }
+
+  // Example usage:
+  showCustomAlert("Custom Title", "This is a custom alert message.");
+</script>
+
+</body>
+</html>
